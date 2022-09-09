@@ -1,0 +1,29 @@
+import javax.swing.JOptionPane;
+
+public class principal {
+  // este projeto ira entrar com o nome, a idade e o salário
+  // de um funcionario e exibir esses dados
+    public static void main(String[] args) {
+        //objeto criado para instanciar a classe funcionario
+        funcionarios func = new funcionarios();
+       // declarar as variáveis
+       String nome;
+       int idade;
+       double salario;
+       //entrada de valores
+       nome = JOptionPane.showInputDialog("Digite o nome:");
+       idade = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade:"));
+       salario = Double.parseDouble(JOptionPane.showInputDialog("salario:"));
+       // atribuir aos valores as variaveis
+       func.nome_func=nome;
+       func.idade_func=idade;
+       func.salario_func=salario;
+       // saída de valores
+       JOptionPane.showMessageDialog(null,"Nome pessoa: "+func.nome_func+
+               "\nSalario: "+func.salario_func+"\nIdade: "+func.idade_func);
+       
+      /*** JOptionPane.showMessageDialog(null,"Nome: "+nome+
+               "\nIdade: "+idade+"\nSalário: "+salario);  ******/
+    }
+    
+}
